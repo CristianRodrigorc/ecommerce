@@ -8,8 +8,8 @@ import MobileMenu from './components/Menu'
 
 function App() {
   return (
-    <div className="h-screen w-screen bg-gray-100">
-      <header className="bg-white shadow-sm">
+    <div className="h-full w-full bg-gray-100 ">
+      <header className="bg-white shadow-sm px-6">
         <div>
           <div className="flex justify-end py-1">
             <nav className="hidden md:flex space-x-10">
@@ -44,9 +44,9 @@ function App() {
         </div>
       </header>
 
-      <main className="w-full mx-auto py-4 px-2 flex flex-col gap-4 md:gap-8">
+      <main className="w-full mx-auto py-4 px-4 flex flex-col gap-4 md:gap-8">
 
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4 md:text-5xl lg:text-8xl">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 md:text-5xl lg:text-8xl text-center">
           ¡Bienvenido!
         </h2>
 
@@ -58,7 +58,8 @@ function App() {
               [&_.swiper-slide]:h-full [&_.swiper-slide]:w-full 
               [&_.swiper-slide>div]:flex [&_.swiper-slide>div]:flex-col [&_.swiper-slide>div]:justify-center [&_.swiper-slide>div]:items-center [&_.swiper-slide>div]:py-7
               [&_.swiper-button-prev]:hidden [&_.swiper-button-next]:hidden
-              md:[&_.swiper-button-prev]:block md:[&_.swiper-button-next]:block">
+              md:[&_.swiper-button-prev]:block md:[&_.swiper-button-next]:block
+              md:[&_.swiper-slide>div>p]:text-lg">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               navigation
@@ -97,8 +98,8 @@ function App() {
         </div>
 
         {/* Productos */}
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-8 md:text-5xl lg:text-8xl">Productos</h2>
+        <div className="h-full w-full">
+          <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-8 md:text-5xl lg:text-8xl text-center">Productos</h2>
           <div className="flex flex-col gap-4">
             <div className="flex flex-row gap-4">
                 <button className="border-2 border-black rounded-lg"><img src="https://i.pinimg.com/736x/93/cb/78/93cb7857892110ead16a061da4065562.jpg" alt="moda" className="w-36 h-36 object-cover rounded-lg" /></button>
@@ -121,14 +122,14 @@ function App() {
       <footer className="bg-gray-900 text-white mt-16">
         <div className="max-w-7xl mx-auto px-4 py-12">
           {/* Sección principal del footer */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-8 text-center">
             
             {/* Logo y descripción */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 text-center">
               <h3 className="font-goldman text-2xl font-bold text-orange-400 mb-4">
                 Mi E-commerce
               </h3>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <p className="text-gray-300 mb-4 leading-relaxed text-md">
                 Tu tienda online de confianza con los mejores productos. 
                 Ofrecemos calidad, variedad y un servicio excepcional para 
                 satisfacer todas tus necesidades.
@@ -150,7 +151,7 @@ function App() {
             </div>
 
             {/* Enlaces rápidos */}
-            <div>
+            <div className="text-center">
               <h4 className="font-semibold text-lg mb-4 text-white">Enlaces Rápidos</h4>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Inicio</a></li>
@@ -162,7 +163,7 @@ function App() {
             </div>
 
             {/* Categorías */}
-            <div>
+            <div className="text-center">
               <h4 className="font-semibold text-lg mb-4 text-white">Categorías</h4>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Ropa</a></li>
@@ -176,24 +177,24 @@ function App() {
 
           {/* Sección de contacto */}
           <div className="border-t border-gray-700 pt-8 mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center">
-                <i className="bi bi-geo-alt-fill text-orange-400 text-xl mr-3"></i>
-                <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="flex flex-col items-center">
+                <i className="bi bi-geo-alt-fill text-orange-400 text-xl mb-2"></i>
+                <div className="text-center">
                   <p className="font-semibold">Dirección</p>
                   <p className="text-gray-300 text-sm">Calle Principal 123, Ciudad</p>
                 </div>
               </div>
-              <div className="flex items-center">
-                <i className="bi bi-telephone-fill text-orange-400 text-xl mr-3"></i>
-                <div>
+              <div className="flex flex-col items-center">
+                <i className="bi bi-telephone-fill text-orange-400 text-xl mb-2"></i>
+                <div className="text-center">
                   <p className="font-semibold">Teléfono</p>
                   <p className="text-gray-300 text-sm">+34 662 174 211</p>
                 </div>
               </div>
-              <div className="flex items-center">
-                <i className="bi bi-envelope-fill text-orange-400 text-xl mr-3"></i>
-                <div>
+              <div className="flex flex-col items-center">
+                <i className="bi bi-envelope-fill text-orange-400 text-xl mb-2"></i>
+                <div className="text-center">
                   <p className="font-semibold">Email</p>
                   <p className="text-gray-300 text-sm">cristian24121997@gmail.com</p>
                 </div>
@@ -222,7 +223,7 @@ function App() {
           {/* Copyright */}
           <div className="border-t border-gray-700 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Mi E-commerce. Todos los derechos reservados. | 
+              © 2025 Mi E-commerce. Todos los derechos reservados. | 
               <a href="#" className="text-orange-400 hover:text-orange-300 ml-1">Política de Privacidad</a> | 
               <a href="#" className="text-orange-400 hover:text-orange-300 ml-1">Términos de Servicio</a>
             </p>

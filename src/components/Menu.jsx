@@ -22,10 +22,10 @@ const MobileMenu = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="w-1/6 md:hidden relative menu-container">
+    <div className="w-1/6 md:hidden relative menu-container flex sm:justify-end">
       <button 
         onClick={toggleMenu}
-        className="p-2 text-gray-500 hover:text-gray-900 transition-colors border border-gray-200 rounded-lg"
+        className="p-2 sm:mx-4 text-gray-500 hover:text-gray-900 transition-colors border border-gray-200 rounded-lg"
       >
         <img 
           src="https://img.icons8.com/?size=100&id=AIKpBfRmU6YN&format=png&color=000000" 
