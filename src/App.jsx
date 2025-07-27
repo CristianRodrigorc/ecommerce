@@ -1,4 +1,3 @@
-import './App.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
@@ -9,7 +8,7 @@ import MobileMenu from './components/Menu'
 
 function App() {
   return (
-    <div className="h-screen bg-gray-100">
+    <div className="h-screen w-screen bg-gray-100">
       <header className="bg-white shadow-sm">
         <div>
           <div className="flex justify-end py-1">
@@ -26,14 +25,14 @@ function App() {
               </h1>
             </div>
             <div>
-              <ul className="hidden md:flex flex-row md:w-1/3 gap-4 text-md">
+              <ul className="hidden md:flex flex-row md:w-1/3 gap-4 text-md md:text-2xl">
                 <li><a href="#">Ropa</a></li>
                 <li><a href="#">Accesorios</a></li>
                 <li><a href="#">Hogar</a></li>
                 <li><a href="#">Tecnología</a></li>
               </ul>
             </div>
-            <div className="w-2/6 md:flex md:w-1/3">
+            <div className="w-2/6 md:flex md:w-1/3 md:ml-10">
               <input
                 type="text"
                 placeholder="🔎 Buscar productos..."
@@ -134,7 +133,7 @@ function App() {
                 Ofrecemos calidad, variedad y un servicio excepcional para 
                 satisfacer todas tus necesidades.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-8 justify-center">
                 <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                   <i className="bi bi-facebook text-xl"></i>
                 </a>
@@ -189,14 +188,14 @@ function App() {
                 <i className="bi bi-telephone-fill text-orange-400 text-xl mr-3"></i>
                 <div>
                   <p className="font-semibold">Teléfono</p>
-                  <p className="text-gray-300 text-sm">+1 234 567 890</p>
+                  <p className="text-gray-300 text-sm">+34 662 174 211</p>
                 </div>
               </div>
               <div className="flex items-center">
                 <i className="bi bi-envelope-fill text-orange-400 text-xl mr-3"></i>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-gray-300 text-sm">info@miecommerce.com</p>
+                  <p className="text-gray-300 text-sm">cristian24121997@gmail.com</p>
                 </div>
               </div>
             </div>
