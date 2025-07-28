@@ -22,7 +22,7 @@ const MobileMenu = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="w-1/6 md:hidden relative menu-container flex sm:justify-end">
+    <div className="w-1/6 md:hidden relative menu-container flex justify-end">
       <button 
         onClick={toggleMenu}
         className="p-2 sm:mx-4 text-gray-500 hover:text-gray-900 transition-colors border border-gray-200 rounded-lg"
@@ -51,13 +51,13 @@ const MobileMenu = () => {
               Carrito
             </a>
             <hr className="my-2" />
-            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
+            <a href="App.jsx#inicio" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
               Inicio
             </a>
-            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
+            <a href="App.jsx#productos" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
               Productos
             </a>
-            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
+            <a href="App.jsx#contacto" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
               Contacto
             </a>
           </div>
