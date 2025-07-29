@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 function Home() {
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            const elementId = hash.substring(1);
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, []);
     return (
         <>
             <div className="w-full mx-auto py-4 px-4 flex flex-col items-center gap-4 md:gap-8 lg:gap-16">
@@ -15,7 +26,7 @@ function Home() {
                 </h2>
 
 
-                <div className="bg-white rounded-3xl shadow max-w-6xl h-full w-full md:mx-8 lg:mx-16">
+                <div className="bg-white rounded-3xl shadow max-w-7xl h-full w-full md:mx-8 lg:mx-16">
                     {/* Carrusel */}
                     <div className="w-full h-full
               [&_.swiper]:rounded-lg [&_.swiper]:shadow-lg
@@ -69,7 +80,7 @@ function Home() {
                             <SwiperSlide>
                                 <div>
                                     <p>
-                                        Se trabajó con React, Vite y Tailwind CSS.
+                                        Un trabajo con React, Vite y Tailwind CSS.
                                     </p>
                                     <img src="public/images/portada2.png" alt="portada" />
                                 </div>
@@ -88,7 +99,7 @@ function Home() {
 
 
                 {/* Productos */}
-                <div className="h-full w-full max-w-6xl mx-auto space-y-4 mt-6" id="productos">
+                <div className="h-full w-full max-w-7xl mx-auto space-y-4 mt-6" id="productos">
                     <div className="rounded-lg pb-1 mb-2 bg-white">
                         <h2 className="font-michroma text-2xl font-semibold text-orange-500 mt-8 mb-2 md:text-5xl lg:text-8xl text-center underline" id="productos">
                             Productos
@@ -97,7 +108,7 @@ function Home() {
                     <div className="rounded-lg shadow p-2 mt-2 bg-white">
                         <div>
                             <h3 className="font-goldman text-xl font-semibold text-orange-500  mb-4 md:text-5xl lg:text-8xl text-start underline">
-                                Moda
+                                <Link to="/moda">Moda</Link>
                             </h3>
                             <div className="flex flex-col gap-4">
                                 <div>

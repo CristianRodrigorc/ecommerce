@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 import MobileMenu from './components/Menu'
 import Home from './pages/Home'
 import Moda from './pages/Moda'
-
+import Accesorios from './pages/Accesorios' 
+import Hogar from './pages/Hogar'
+import Tecnologia from './pages/Tecnologia'
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
             <nav className="hidden md:flex space-x-10 [&>Link:hover]:underline">
               <Link to="/" className="text-gray-500 hover:text-gray-900">Inicio</Link>
               <Link to="/#productos" className="text-gray-500 hover:text-gray-900">Productos</Link>
-              <Link to="/carrito" className="text-gray-500 hover:text-gray-900">Carrito</Link>
+              <Link to="" className="text-gray-500 hover:text-gray-900">Carrito</Link>
             </nav>
           </div>
           <div className="flex md:justify-between items-center py-1">
@@ -27,9 +29,9 @@ function App() {
             <div>
               <ul className="hidden font-michroma md:flex flex-row md:w-1/3 gap-4 text-md md:text-md lg:text-xl lg:gap-6 [&>li:hover]:underline ">
                 <li><Link to="/moda">Moda</Link></li>
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="#">Hogar</a></li>
-                <li><a href="#">Tecnología</a></li>
+                <li><Link to="/accesorios">Accesorios</Link></li>
+                <li><Link to="/hogar">Hogar</Link></li>
+                <li><Link to="/tecnologia">Tecnología</Link></li>
               </ul>
             </div>
             <div className="w-2/6 md:flex md:w-1/3 md:ml-10">
@@ -48,6 +50,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/moda" element={<Moda />}/>
+          <Route path="/accesorios" element={<Accesorios />}/>
+          <Route path="/hogar" element={<Hogar />}/>
+          <Route path="/tecnologia" element={<Tecnologia />}/>
         </Routes>
       </main>
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const MobileMenu = () => {
       {/* Menú desplegable */}
       {isMenuOpen && (
         <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
-          <div className="py-2">
+          <div className="py-2 [&>a:hover]:underline [&>Link:hover]:underline ">
             <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
               <i className="bi bi-person-fill mr-2"></i>
               Mi Cuenta
@@ -51,13 +52,13 @@ const MobileMenu = () => {
               Carrito
             </a>
             <hr className="my-2" />
-            <a href="App.jsx#inicio" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
+            <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
               Inicio
-            </a>
-            <a href="App.jsx#productos" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
+            </Link>
+            <Link to="/#productos" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
               Productos
-            </a>
-            <a href="App.jsx#contacto" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
+            </Link>
+            <a href="#contacto" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
               Contacto
             </a>
           </div>
