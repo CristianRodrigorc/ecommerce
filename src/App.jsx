@@ -1,5 +1,6 @@
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Routes, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import MobileMenu from './components/Menu'
 import Home from './pages/Home'
 import Moda from './pages/Moda'
@@ -11,10 +12,10 @@ function App() {
       <header className="bg-white shadow-sm px-3">
         <div>
           <div className="flex justify-end py-1">
-            <nav className="hidden md:flex space-x-10">
-              <a href="#" className="text-gray-500 hover:text-gray-900">Inicio</a>
-              <a href="#" className="text-gray-500 hover:text-gray-900">Productos</a>
-              <a href="#" className="text-gray-500 hover:text-gray-900">Carrito</a>
+            <nav className="hidden md:flex space-x-10 [&>Link:hover]:underline">
+              <Link to="/" className="text-gray-500 hover:text-gray-900">Inicio</Link>
+              <Link to="/#productos" className="text-gray-500 hover:text-gray-900">Productos</Link>
+              <Link to="/carrito" className="text-gray-500 hover:text-gray-900">Carrito</Link>
             </nav>
           </div>
           <div className="flex md:justify-between items-center py-1">
@@ -24,8 +25,8 @@ function App() {
               </h1>
             </div>
             <div>
-              <ul className="hidden font-michroma md:flex flex-row md:w-1/3 gap-4 text-md md:text-md lg:text-xl lg:gap-6 [&>li>a:hover]:underline ">
-                <li><a href="#">Moda</a></li>
+              <ul className="hidden font-michroma md:flex flex-row md:w-1/3 gap-4 text-md md:text-md lg:text-xl lg:gap-6 [&>li:hover]:underline ">
+                <li><Link to="/moda">Moda</Link></li>
                 <li><a href="#">Accesorios</a></li>
                 <li><a href="#">Hogar</a></li>
                 <li><a href="#">Tecnología</a></li>
@@ -46,6 +47,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/moda" element={<Moda />}/>
         </Routes>
       </main>
 

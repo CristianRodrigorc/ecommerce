@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 function Home() {
     return (
         <>
-            <main className="w-full mx-auto py-4 px-4 flex flex-col items-center gap-4 md:gap-8 lg:gap-16">
+            <div className="w-full mx-auto py-4 px-4 flex flex-col items-center gap-4 md:gap-8 lg:gap-16">
 
                 <h2 className="font-michroma text-2xl font-semibold text-orange-500 mt-6 mb-2 sm:text-3xl md:text-5xl lg:text-7xl text-center underline">
                     ¡Bienvenido!
@@ -88,7 +88,7 @@ function Home() {
 
 
                 {/* Productos */}
-                <div className="h-full w-full max-w-6xl mx-auto space-y-4 mt-6">
+                <div className="h-full w-full max-w-6xl mx-auto space-y-4 mt-6" id="productos">
                     <div className="rounded-lg pb-1 mb-2 bg-white">
                         <h2 className="font-michroma text-2xl font-semibold text-orange-500 mt-8 mb-2 md:text-5xl lg:text-8xl text-center underline" id="productos">
                             Productos
@@ -193,7 +193,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
         </>
     )
 }

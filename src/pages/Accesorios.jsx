@@ -1,16 +1,14 @@
-import React from "react";
+import React from 'react';
 
-
-
-function Moda(){
-    return (
+function Accesorios(){
+    return(
         <div className="min-h-screen bg-gray-100">
             <div className="max-w-7xl mx-auto px-4 py-8">
                 <h1 className="font-viga text-3xl font-bold text-orange-500 sm:text-4xl md:text-5xl lg:text-6xl text-center mb-8">
                     Colección de Moda
                 </h1>
                 <p className="text-gray-600 text-center text-lg md:text-xl mb-8">
-                    Descubre las últimas tendencias en ropa
+                    Descubre las últimas tendencias en accesorios
                 </p>
 
                 <div className="bg-white rounded-2xl shadow-lg p-6">
@@ -25,4 +23,5 @@ function Moda(){
         </div>
     )
 }
-export default Moda;
+
+export default Accesorios;
