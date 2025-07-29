@@ -20,12 +20,12 @@ function App() {
           </div>
           <div className="flex md:justify-between items-center py-1">
             <div className="w-3/6 md:w-1/3">
-              <h1 className="font-viga text-xl font-bold text-left text-orange-500 md:text-4xl" id="inicio">
+              <h1 className="font-viga text-xl font-bold text-left text-orange-500 sm:text-2xl md:text-4xl lg:text-6xl" id="inicio">
                 Mi E-commerce
               </h1>
             </div>
             <div>
-              <ul className="hidden md:flex flex-row md:w-1/3 gap-4 text-md md:text-2xl">
+              <ul className="hidden font-michroma md:flex flex-row md:w-1/3 gap-4 text-md md:text-md lg:text-xl lg:gap-6 [&>li>a:hover]:underline ">
                 <li><a href="#">Moda</a></li>
                 <li><a href="#">Accesorios</a></li>
                 <li><a href="#">Hogar</a></li>
@@ -36,7 +36,7 @@ function App() {
               <input
                 type="text"
                 placeholder="🔎 Buscar productos..."
-                className="px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full"
+                className="px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full text-md md:text-2xl lg:text-3xl"
               />
             </div>
             <MobileMenu />
@@ -44,23 +44,47 @@ function App() {
         </div>
       </header>
 
-      <main className="w-full mx-auto py-4 px-4 flex flex-col gap-4 md:gap-8">
+      <main className="w-full mx-auto py-4 px-4 flex flex-col items-center gap-4 md:gap-8 lg:gap-16">
 
-        <h2 className="font-michroma text-2xl font-semibold text-orange-500 mt-6 mb-2 md:text-5xl lg:text-8xl text-center underline">
+        <h2 className="font-michroma text-2xl font-semibold text-orange-500 mt-6 mb-2 sm:text-3xl md:text-5xl lg:text-7xl text-center underline">
           ¡Bienvenido!
         </h2>
 
 
-        <div className="bg-white rounded-lg shadow w-full h-full">
+        <div className="bg-white rounded-3xl shadow max-w-6xl h-full w-full md:mx-8 lg:mx-16">
           {/* Carrusel */}
           <div className="w-full h-full
               [&_.swiper]:rounded-lg [&_.swiper]:shadow-lg
-              [&_.swiper-slide]:h-full [&_.swiper-slide]:w-full 
-              [&_.swiper-slide>div]:flex [&_.swiper-slide>div]:flex-col [&_.swiper-slide>div]:justify-center [&_.swiper-slide>div]:items-center [&_.swiper-slide>div]:py-7
+              [&_.swiper-slide]:h-full 
+              [&_.swiper-slide]:w-full 
+              [&_.swiper-slide>div]:flex 
+              [&_.swiper-slide>div]:flex-col 
+              [&_.swiper-slide>div]:justify-center 
+              [&_.swiper-slide>div]:items-center 
+              [&_.swiper-slide>div]:py-2 
+              [&_.swiper-slide>div]:pb-10 
+              [&_.swiper-slide>div]:px-4
               [&_.swiper-button-prev]:hidden [&_.swiper-button-next]:hidden
+              [&_.swiper-pagination]:block
+              [&_.swiper-slide>div>p]:mb-3
+              [&_.swiper-slide>div>p]:text-md
+              [&_.swiper-slide>div>img]:rounded-2xl
+              [&_.swiper-slide>div>img]:shadow-lg
+              [&_.swiper-slide>div>img]:shadow-black
+              [&_.swiper-slide>div>img]:w-full
+              [&_.swiper-slide>div>img]:h-full
+              [&_.swiper-slide>div>img]:object-cover
+              sm:[&_.swiper-slide>div]:mx-4
+              sm:[&_.swiper-slide>div>p]:text-2xl
+              sm:[&_.swiper-slide>div>p]:my-2
+              md:[&_.swiper-slide>div]:mx-9
               md:[&_.swiper-button-prev]:block md:[&_.swiper-button-next]:block
-              [&_.swiper-slide>div>p]:text-lg
-              md:[&_.swiper-slide>div>p]:text-lg">
+              md:[&_.swiper-slide>div>p]:text-3xl
+              md:[&_.swiper-slide>div>p]:my-6
+              lg:[&_.swiper-slide>div>p]:text-5xl
+              lg:[&_.swiper-slide>div>p]:mt-8
+              lg:[&_.swiper-slide>div>p]:mb-10
+              ">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               navigation
@@ -72,63 +96,69 @@ function App() {
             >
               <SwiperSlide >
                 <div>
-                  <p className=" mb-2">
+                  <p>
                     Nuevo proyecto de E-Commerce.
                   </p>
-                  <img src="public/images/portada.png" alt="portada" className="w-full h-full object-cover" />
+                  <img src="public/images/portada.png" alt="portada" />
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <p className="text-gray-600 mb-2">
+                  <p>
                     Se trabajó con React, Vite y Tailwind CSS.
                   </p>
-                  <img src="public/images/portada2.png" alt="portada" className="w-full h-full object-cover" />
+                  <img src="public/images/portada2.png" alt="portada"/>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <p className="text-gray-600 mb-2">
+                  <p>
                     Un diseño agradable y funcional.
                   </p>
-                  <img src="public/images/portada3.png" alt="portada" className="w-full h-full object-cover" />
+                  <img src="public/images/portada3.png" alt="portada"/>
                 </div>
               </SwiperSlide>
             </Swiper>
           </div>
         </div>
+        
 
         {/* Productos */}
-        <div className="h-full w-full">
-          <h2 className="font-michroma text-2xl font-semibold text-orange-500 mt-8 mb-2 md:text-5xl lg:text-8xl text-center underline" id="productos">
-            Productos
-          </h2>
-          <div>
-            <h3 className="font-goldman text-xl font-semibold text-orange-500 mt-4 mb-4 md:text-5xl lg:text-8xl text-start underline">
-              Moda
-            </h3>
-            <div className="flex flex-col gap-4">
-              <div>
-                <img src="public/images/moda/oferta-moda.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
-              </div>
-              <div className="flex flex-row gap-4">
-                <div className="w-1/2">
-                  <img src="public/images/moda/moda-ninos9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+        <div className="h-full w-full max-w-6xl mx-auto space-y-4 mt-6">
+          <div className="rounded-lg pb-1 mb-2 bg-white">
+            <h2 className="font-michroma text-2xl font-semibold text-orange-500 mt-8 mb-2 md:text-5xl lg:text-8xl text-center underline" id="productos">
+              Productos
+            </h2>
+          </div>
+          <div className="rounded-lg shadow p-2 mt-2 bg-white">
+            <div>
+              <h3 className="font-goldman text-xl font-semibold text-orange-500  mb-4 md:text-5xl lg:text-8xl text-start underline">
+                Moda
+              </h3>
+              <div className="flex flex-col gap-4">
+                <div>
+                  <img src="public/images/moda/oferta-moda.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                 </div>
-                <div className="w-1/2">
-                  <div className="mb-4">
-                    <img src="public/images/moda/moda-hombre1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                <div className="flex flex-row gap-4">
+                  <div className="w-1/2">
+                    <img src="public/images/moda/moda-ninos9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                   </div>
-                  <div>
-                    <img src="public/images/moda/moda-mujer1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                  <div className="w-1/2">
+                    <div className="mb-4">
+                      <img src="public/images/moda/moda-hombre1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                    </div>
+                    <div>
+                      <img src="public/images/moda/moda-mujer1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div>
-            <h3 className="font-goldman text-xl font-semibold text-orange-500 mt-12 mb-4 md:text-5xl lg:text-8xl text-start underline">
+
+          <div className="rounded-lg shadow p-2 bg-white">
+            <h3 className="font-goldman text-xl font-semibold text-orange-500 mb-4 md:text-5xl lg:text-8xl text-start underline">
               Accesorios
             </h3>
             <div className="flex flex-row gap-4">
@@ -146,8 +176,8 @@ function App() {
             </div>
           </div>
 
-          <div>
-            <h3 className="font-goldman text-xl font-semibold text-orange-500 mt-12 mb-4 md:text-5xl lg:text-8xl text-start underline">
+          <div className="rounded-lg shadow p-2 mt-2 bg-white">
+            <h3 className="font-goldman text-xl font-semibold text-orange-500 mb-4 md:text-5xl lg:text-8xl text-start underline">
               Hogar
             </h3>
             <div className="flex flex-col gap-4">
@@ -174,8 +204,8 @@ function App() {
             </div>
           </div>
 
-          <div>
-            <h3 className="font-goldman text-xl font-semibold text-orange-500 mt-12 mb-4 md:text-5xl lg:text-8xl text-start underline">
+          <div className="rounded-lg shadow p-2 mt-2 bg-white">
+            <h3 className="font-goldman text-xl font-semibold text-orange-500 mb-4 md:text-5xl lg:text-8xl text-start underline">
               Tecnología
             </h3>
             <div className="flex flex-col gap-4">
