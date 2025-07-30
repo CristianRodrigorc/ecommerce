@@ -74,7 +74,7 @@ function Home() {
                                     <p>
                                         Nuevo proyecto de E-Commerce.
                                     </p>
-                                    <img src="public/images/portada.png" alt="portada" />
+                                    <img src="/images/portada.png" alt="portada" />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
@@ -82,7 +82,7 @@ function Home() {
                                     <p>
                                         Un trabajo con React, Vite y Tailwind CSS.
                                     </p>
-                                    <img src="public/images/portada2.png" alt="portada" />
+                                    <img src="/images/portada2.png" alt="portada" />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
@@ -90,7 +90,7 @@ function Home() {
                                     <p>
                                         Un diseño agradable y funcional.
                                     </p>
-                                    <img src="public/images/portada3.png" alt="portada" />
+                                    <img src="/images/portada3.png" alt="portada" />
                                 </div>
                             </SwiperSlide>
                         </Swiper>
@@ -112,18 +112,18 @@ function Home() {
                             </h3>
                             <div className="flex flex-col gap-4">
                                 <div>
-                                    <img src="public/images/moda/oferta-moda.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                                    <img src="/images/moda/oferta-moda.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                                 </div>
                                 <div className="flex flex-row gap-4">
                                     <div className="w-1/2">
-                                        <img src="public/images/moda/moda-ninos9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                                        <img src="/images/moda/moda-ninos9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                                     </div>
                                     <div className="w-1/2">
                                         <div className="mb-4">
-                                            <img src="public/images/moda/moda-hombre1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                                            <img src="/images/moda/moda-hombre1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                                         </div>
                                         <div>
-                                            <img src="public/images/moda/moda-mujer1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                                            <img src="/images/moda/moda-mujer1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                                         </div>
                                     </div>
                                 </div>
@@ -139,14 +139,14 @@ function Home() {
                         <div className="flex flex-row gap-4">
                             <div className="w-1/2">
                                 <div className="mb-4">
-                                    <img src="public/images/accesorios/accesorio-hombre1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                                    <img src="/images/accesorios/accesorio-hombre1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                                 </div>
                                 <div>
-                                    <img src="public/images/accesorios/accesorio-mujer1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                                    <img src="/images/accesorios/accesorio-mujer1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                                 </div>
                             </div>
                             <div className="w-1/2">
-                                <img src="public/images/accesorios/oferta-accesorio9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
+                                <img src="/images/accesorios/oferta-accesorio9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-all duration-300" />
                             </div>
                         </div>
                     </div>
@@ -158,22 +158,22 @@ function Home() {
                         <div className="flex flex-col gap-4">
                             <div className="grid grid-cols-2 grid-rows-3 gap-4 [&>div:hover>img]:scale-105 [&>div>img]:transition-all [&>div>img]:duration-300">
                                 <div className="col-span-2 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/hogar/oferta-hogar.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg" />
+                                    <img src="/images/hogar/oferta-hogar.png" alt="portada" className="w-full h-full object-cover rounded-lg shadow-lg" />
                                 </div>
                                 <div className="row-span-2 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/hogar/muebles-piscina9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/hogar/muebles-piscina9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 <div className="row-span-1 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/hogar/muebles-bano1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/hogar/muebles-bano1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 <div className="row-span-2 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/hogar/muebles-oficina9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/hogar/muebles-oficina9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 <div className="row-span-1 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/hogar/muebles-salon1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/hogar/muebles-salon1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 <div className="col-span-2 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/hogar/muebles-habitacion16-9.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/hogar/muebles-habitacion16-9.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                             </div>
                         </div>
@@ -186,19 +186,19 @@ function Home() {
                         <div className="flex flex-col gap-4">
                             <div className="grid grid-cols-3 grid-rows-1 gap-4 [&>div:hover>img]:scale-105 [&>div>img]:transition-all [&>div>img]:duration-300">
                                 <div className="col-span-3 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/tecnologia/oferta-tecnologia.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/tecnologia/oferta-tecnologia.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 <div className="row-span-2 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/tecnologia/tecnologia-mobil9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/tecnologia/tecnologia-mobil9-16.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 <div className="shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/tecnologia/tecnologia-consola1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/tecnologia/tecnologia-consola1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 <div className="shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/tecnologia/tecnologia-portatil1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/tecnologia/tecnologia-portatil1-1.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                                 <div className="col-span-2 shadow-black shadow-lg rounded-lg">
-                                    <img src="public/images/tecnologia/tecnologia-tv16-9.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
+                                    <img src="/images/tecnologia/tecnologia-tv16-9.png" alt="portada" className="w-full h-full object-cover rounded-lg" />
                                 </div>
                             </div>
                         </div>
