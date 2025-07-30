@@ -1,14 +1,20 @@
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Routes, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { CartProvider, useCart } from './context/CartContext'
 import MobileMenu from './components/Menu'
+import Cart from './components/Cart'
 import Home from './pages/Home'
 import Moda from './pages/Moda'
 import Accesorios from './pages/Accesorios' 
 import Hogar from './pages/Hogar'
 import Tecnologia from './pages/Tecnologia'
 
-function App() {
+function AppContent() {
+  const { itemCount } = useCart();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
   return (
     <div className="h-full w-full bg-gray-100 ">
       <header className="bg-white shadow-sm px-3">
@@ -17,7 +23,17 @@ function App() {
             <nav className="hidden md:flex space-x-10 [&>Link:hover]:underline">
               <Link to="/" className="text-gray-500 hover:text-gray-900">Inicio</Link>
               <Link to="/#productos" className="text-gray-500 hover:text-gray-900">Productos</Link>
-              <Link to="" className="text-gray-500 hover:text-gray-900">Carrito</Link>
+              <button 
+                onClick={() => setIsCartOpen(true)}
+                className="text-gray-500 hover:text-gray-900 flex items-center space-x-1"
+              >
+                <span>Carrito</span>
+                {itemCount > 0 && (
+                  <span className="bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {itemCount}
+                  </span>
+                )}
+              </button>
             </nav>
           </div>
           <div className="flex md:justify-between items-center py-1">
@@ -55,6 +71,9 @@ function App() {
           <Route path="/tecnologia" element={<Tecnologia />}/>
         </Routes>
       </main>
+
+      {/* Carrito */}
+      <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white mt-16" id="contacto">
@@ -170,6 +189,14 @@ function App() {
       </footer>
     </div>
   )
+}
+
+function App() {
+  return (
+    <CartProvider>
+      <AppContent />
+    </CartProvider>
+  );
 }
 
 export default App

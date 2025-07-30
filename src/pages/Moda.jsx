@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from '../supabaseClient';
+import { useCart } from '../context/CartContext';
 
 function Moda() {
+  const { addToCart } = useCart();
   const [productos, setProductos] = useState([]);
   const [productosFiltrados, setProductosFiltrados] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -303,7 +305,10 @@ function Moda() {
                     <span className="text-orange-500 font-bold text-lg">
                       €{producto.price}
                     </span>
-                    <button className="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                    <button 
+                      onClick={() => addToCart(producto)}
+                      className="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors"
+                    >
                       Añadir al carrito
                     </button>
                   </div>
