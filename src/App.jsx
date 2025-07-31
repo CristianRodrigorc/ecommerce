@@ -50,7 +50,7 @@ function AppContent() {
                 <li><Link to="/tecnologia">Tecnología</Link></li>
               </ul>
             </div>
-            <div className="w-2/6 md:flex md:w-1/3 md:ml-10">
+                        <div className="w-2/6 md:flex md:w-1/3 md:ml-10">
               <input
                 type="text"
                 placeholder="🔎 Buscar productos..."

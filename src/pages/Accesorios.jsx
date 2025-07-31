@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../supabaseClient';
 import { useCart } from '../context/CartContext';
+import { useSearchParams } from 'react-router-dom';
 
 function Accesorios(){
     //Estado para el carrito
     const { addToCart } = useCart();
+    const [searchParams] = useSearchParams();
 
     //Estado para los productos
     const [productos, setProductos] = useState([]);
@@ -41,6 +43,14 @@ function Accesorios(){
     useEffect(()=>{
         cargarProductos();
     }, []);
+
+    // Efecto para manejar búsqueda desde URL
+    useEffect(() => {
+        const searchFromURL = searchParams.get('search');
+        if (searchFromURL) {
+            setFiltros(prev => ({ ...prev, busqueda: searchFromURL }));
+        }
+    }, [searchParams]);
 
     useEffect(() => {
         aplicarFiltros();
