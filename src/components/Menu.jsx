@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
-const MobileMenu = () => {
+const MobileMenu = ({ onOpenCart, itemCount }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -47,10 +47,23 @@ const MobileMenu = () => {
               <i className="bi bi-heart-fill mr-2"></i>
               Favoritos
             </a>
-            <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
-              <i className="bi bi-cart-fill mr-2"></i>
-              Carrito
-            </a>
+            <button 
+              onClick={() => {
+                onOpenCart();
+                setIsMenuOpen(false);
+              }}
+              className="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors flex items-center justify-between"
+            >
+              <span>
+                <i className="bi bi-cart-fill mr-2"></i>
+                Carrito
+              </span>
+              {itemCount > 0 && (
+                <span className="bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {itemCount}
+                </span>
+              )}
+            </button>
             <hr className="my-2" />
             <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
               Inicio

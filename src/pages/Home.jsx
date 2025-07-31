@@ -134,7 +134,7 @@ function Home() {
 
                     <div className="rounded-lg shadow p-2 bg-white">
                         <h3 className="font-goldman text-xl font-semibold text-orange-500 mb-4 md:text-5xl lg:text-8xl text-start underline">
-                            Accesorios
+                        <Link to="/accesorios">Accesorios</Link>
                         </h3>
                         <div className="flex flex-row gap-4">
                             <div className="w-1/2">
@@ -153,7 +153,7 @@ function Home() {
 
                     <div className="rounded-lg shadow p-2 mt-2 bg-white">
                         <h3 className="font-goldman text-xl font-semibold text-orange-500 mb-4 md:text-5xl lg:text-8xl text-start underline">
-                            Hogar
+                        <Link to="/hogar">Hogar</Link>
                         </h3>
                         <div className="flex flex-col gap-4">
                             <div className="grid grid-cols-2 grid-rows-3 gap-4 [&>div:hover>img]:scale-105 [&>div>img]:transition-all [&>div>img]:duration-300">
@@ -181,7 +181,7 @@ function Home() {
 
                     <div className="rounded-lg shadow p-2 mt-2 bg-white">
                         <h3 className="font-goldman text-xl font-semibold text-orange-500 mb-4 md:text-5xl lg:text-8xl text-start underline">
-                            Tecnología
+                        <Link to="/tecnologia">Tecnología</Link>
                         </h3>
                         <div className="flex flex-col gap-4">
                             <div className="grid grid-cols-3 grid-rows-1 gap-4 [&>div:hover>img]:scale-105 [&>div>img]:transition-all [&>div>img]:duration-300">

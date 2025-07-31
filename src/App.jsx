@@ -57,7 +57,7 @@ function AppContent() {
                 className="px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full text-md md:text-2xl lg:text-3xl"
               />
             </div>
-            <MobileMenu />
+            <MobileMenu onOpenCart={() => setIsCartOpen(true)} itemCount={itemCount} />
           </div>
         </div>
       </header>
