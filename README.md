@@ -2,6 +2,22 @@
 
 Un proyecto de e-commerce moderno y responsive desarrollado con React, Vite y Tailwind CSS. Ofrece una experiencia de compra intuitiva con navegación fluida entre páginas y un diseño atractivo.
 
+## 🚨 Inicio Rápido
+
+```bash
+# 1. Clonar el proyecto
+git clone <url-del-repositorio>
+cd ecommerce
+
+# 2. Instalar dependencias (OBLIGATORIO)
+npm install
+
+# 3. Ejecutar el proyecto
+npm run dev
+```
+
+> **⚠️ IMPORTANTE**: Siempre ejecuta `npm install` antes de `npm run dev`. Si ves el error "vite no se reconoce como un comando", significa que las dependencias no están instaladas.
+
 ## ✨ Características
 
 - 🎨 **Diseño Responsive**: Se adapta perfectamente a dispositivos móviles, tablets y desktop
@@ -57,10 +73,11 @@ git clone <url-del-repositorio>
 cd ecommerce
 ```
 
-2. **Instalar dependencias**
+2. **Instalar dependencias** ⚠️ **IMPORTANTE**
 ```bash
 npm install
 ```
+> **Nota**: Este paso es **OBLIGATORIO** antes de ejecutar cualquier comando. Si no instalas las dependencias, verás errores como "vite no se reconoce como un comando".
 
 3. **Ejecutar en modo desarrollo**
 ```bash
@@ -71,6 +88,23 @@ npm run dev
 ```
 http://localhost:5173
 ```
+
+### ⚠️ Problemas Comunes y Soluciones
+
+#### Error: "vite no se reconoce como un comando"
+**Causa**: Las dependencias no están instaladas
+**Solución**: Ejecutar `npm install` antes de `npm run dev`
+
+#### Error: "Cannot find module"
+**Causa**: Dependencias faltantes o corruptas
+**Solución**: 
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+#### Error: Puerto 5173 ocupado
+**Solución**: Vite automáticamente usará el siguiente puerto disponible (5174, 5175, etc.)
 
 ### Comandos disponibles
 
