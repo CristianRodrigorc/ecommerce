@@ -177,13 +177,9 @@ El proyecto está optimizado para:
 
 ## 🚀 Próximas Funcionalidades
 
-- [ ] Página de Accesorios
-- [ ] Página de Hogar
-- [ ] Página de Tecnología
-- [ ] Carrito de compras
 - [ ] Sistema de autenticación
+- [ ] Pasarela de pago
 - [ ] Filtros avanzados
-- [ ] Búsqueda de productos
 
 ## 🤝 Contribuir
 
